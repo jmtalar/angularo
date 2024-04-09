@@ -1,0 +1,22 @@
+<form
+    id="formoza"
+    #f="ngForm"
+    class="flex-column gap-16"
+    [formGroup]="form"
+    (ngSubmit)="onSubmit(f)"
+>
+    <div class="flex-column gap-8">
+        <input formControlName="Name" />
+        <input formControlName="Number" />
+        <input formControlName="Email" />
+    </div>
+
+    <div class="flex-row gap-16">
+        <button type="button" (click)="onResetClick()">Reset</button>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+<button form="formoza">Button referencing form</button>
+
+<button>No function button</button>

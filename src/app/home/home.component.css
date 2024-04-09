@@ -1,0 +1,32 @@
+.link-item {
+    padding: 16px;
+}
+
+.title-row {
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title-label {
+    align-self: center;
+}
+
+.link-list {
+    gap: 8px;
+    justify-content: center;
+}
+
+.link-text {
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    .link-list {
+        gap: 4px;
+    }
+
+    .link-text {
+        font-size: 12px;
+    }
+}

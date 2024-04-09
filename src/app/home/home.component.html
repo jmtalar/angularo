@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row class="title-row">
+        <label class="title-label">My Application</label>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row class="link-list flex-row">
+        <div *ngFor="let link of list" class="title-label">
+            <mat-icon [fontIcon]="link.icon"> </mat-icon>
+            <a [href]="link.url" class="link-text">{{ link.text }}</a>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="link-item">
+    <router-outlet></router-outlet>
+</div>

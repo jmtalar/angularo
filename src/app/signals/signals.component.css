@@ -1,0 +1,13 @@
+@media screen and (max-height: 600px) {
+    .info-item {
+        font-size: 12px;
+    }
+
+    .info-list {
+        gap: 4px;
+    }
+}
+
+.input-text {
+    text-align-last: center;
+}

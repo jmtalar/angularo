@@ -1,0 +1,14 @@
+<div class="flex-column align-items-center gap-32">
+    <div class="flex-row gap-32">
+        <button mat-flat-button color="primary" (click)="addOne()">
+            Add 1
+        </button>
+        <button mat-flat-button color="primary" (click)="substractOne()">
+            Substract 1
+        </button>
+    </div>
+
+    <mat-form-field class="input-text">
+        <input matInput type="text" readonly="true" [value]="infoText" />
+    </mat-form-field>
+</div>

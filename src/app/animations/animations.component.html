@@ -1,0 +1,8 @@
+<nav>
+    <button type="button" (click)="toggleState()">Toggle State</button>
+</nav>
+
+<div
+    [@openClose]="isOpen ? 'open' : 'closed'"
+    class="open-close-container"
+></div>
