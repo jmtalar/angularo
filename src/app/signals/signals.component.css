@@ -10,4 +10,5 @@
 
 .input-text {
     text-align-last: center;
+    min-width: 300px;
 }

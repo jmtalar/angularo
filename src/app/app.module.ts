@@ -16,6 +16,7 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { SignalsComponent } from "./signals/signals.component";
 import { AnimationsComponent } from "./animations/animations.component";
 import { MatInputModule } from "@angular/material/input";
+import { SignalsChildComponent } from "./signals/signals-child/signals-child.component";
 
 @NgModule({
     declarations: [
@@ -24,6 +25,7 @@ import { MatInputModule } from "@angular/material/input";
         HomeComponent,
         FormsComponent,
         SignalsComponent,
+        SignalsChildComponent,
     ],
     imports: [
         BrowserModule,

@@ -1,4 +1,5 @@
-import { Component, signal } from "@angular/core";
+import { Component, computed, signal, effect } from "@angular/core";
+import { SignalsService } from "../domain/services/signals.service";
 
 @Component({
     selector: "app-signals",
@@ -6,20 +7,26 @@ import { Component, signal } from "@angular/core";
     styleUrl: "./signals.component.css",
 })
 export class SignalsComponent {
-    count = signal(0);
-    infoText = `Signal value is: ${this.count()}`;
+    constructor(private service: SignalsService) {
+        effect(() => {
+            this.infoText = `Signal value is: ${this.signalSum()}`;
+            this.infoComputedText = `Computed signal value is: ${this.signalSumComputed()}`;
+        });
+    }
+
+    signalSum = signal(0);
+    signalSumComputed = computed(() => {
+        return this.signalSum() * 10;
+    });
+
+    infoText = ``;
+    infoComputedText = ``;
 
     addOne() {
-        this.count.update((value) => value + 1);
-        this.updateInfo();
+        this.signalSum.update((value) => value + 1);
     }
 
     substractOne() {
-        this.count.update((value) => value - 1);
-        this.updateInfo();
-    }
-
-    updateInfo() {
-        this.infoText = `Signal value is: ${this.count()}`;
+        this.signalSum.update((value) => value - 1);
     }
 }
